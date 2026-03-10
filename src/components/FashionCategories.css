@@ -1,0 +1,184 @@
+/* FashionCategories.css */
+
+.fashion-categories-section {
+  background-color: #ffffff;
+}
+
+.fashion-card {
+  cursor: pointer;
+  border-radius: 16px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.fashion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fashion-image-wrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.fashion-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fashion-card:hover .fashion-image {
+  transform: scale(1.1);
+}
+
+/* Title Overlay - Always Visible */
+.title-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  z-index: 2;
+  pointer-events: none; /* Allows clicks to pass through to the card */
+  transition: opacity 0.3s ease;
+}
+
+.fashion-card:hover .title-overlay {
+  opacity: 0; /* Hide title on hover */
+}
+
+/* Hover Overlay */
+.fashion-overlay {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  pointer-events: none; /* Prevent overlay from blocking clicks */
+}
+
+.fashion-card:hover .fashion-overlay {
+  opacity: 0.85;
+}
+
+.overlay-content {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  pointer-events: auto; /* Allow clicks on buttons inside overlay */
+}
+
+.fashion-card:hover .overlay-content {
+  transform: translateY(0);
+}
+
+/* Category Icon Animation */
+.category-icon {
+  animation: bounce 2s infinite;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Trending Badge */
+.trending-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Filter Pills */
+.filter-pill {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 50px !important;
+}
+
+.filter-pill:hover {
+  background: white;
+  border-color: #8E2DE2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 45, 226, 0.2);
+}
+
+/* Gen Z Banner */
+.genz-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px !important;
+}
+
+.genz-banner::before {
+  content: "⚡";
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  font-size: 100px;
+  opacity: 0.1;
+  color: white;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+/* Bootstrap Overrides */
+.card {
+  --bs-card-border-width: 0;
+  background: transparent;
+}
+
+.btn-light {
+  background-color: white;
+  border: none;
+  transition: all 0.3s ease;
+  pointer-events: auto; /* Ensure button is clickable */
+}
+
+.btn-light:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fashion-image-wrapper {
+    height: 220px;
+  }
+  
+  .filter-pill {
+    padding: 0.5rem !important;
+    font-size: 0.9rem;
+  }
+  
+  .genz-banner h3 {
+    font-size: 1.2rem;
+  }
+  
+  .title-overlay h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .fashion-image-wrapper {
+    height: 200px;
+  }
+  
+  .category-icon {
+    font-size: 2rem;
+  }
+  
+  .overlay-content h4 {
+    font-size: 1.1rem;
+  }
+}

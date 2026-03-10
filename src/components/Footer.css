@@ -1,0 +1,104 @@
+/* Footer Styles */
+.footer {
+  background-color: #0a0a0a !important;
+}
+
+/* Hover effects */
+.hover-white {
+  transition: all 0.3s ease;
+}
+
+.hover-white:hover {
+  color: #ffffff !important;
+  transform: translateX(5px);
+}
+
+/* Link hover animation */
+.footer .list-unstyled li {
+  transition: transform 0.2s ease;
+}
+
+.footer .list-unstyled li:hover {
+  transform: translateX(5px);
+}
+
+/* Social icons hover */
+.footer .d-flex.gap-3 a {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer .d-flex.gap-3 a:hover {
+  transform: translateY(-3px);
+  color: #0d6efd !important;
+}
+
+/* Trust badges icon background */
+.bg-primary.bg-opacity-10 {
+  transition: all 0.3s ease;
+}
+
+.footer [class*="col-md-3"]:hover .bg-primary.bg-opacity-10 {
+  background-color: rgba(13, 110, 253, 0.2) !important;
+  transform: scale(1.1);
+}
+
+/* Newsletter input */
+.footer .form-control {
+  border-color: #333;
+  transition: all 0.3s ease;
+}
+
+.footer .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Button hover */
+.footer .btn-primary {
+  transition: all 0.3s ease;
+}
+
+.footer .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Section borders */
+.border-secondary {
+  border-color: #333 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .footer .border-start,
+  .footer .border-end {
+    border: none !important;
+  }
+  
+  .footer .px-lg-4 {
+    padding: 2rem 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .display-4 {
+    font-size: 2rem;
+  }
+  
+  .footer h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .text-md-end {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
+  
+  .footer .d-flex.align-items-center {
+    justify-content: center;
+  }
+}

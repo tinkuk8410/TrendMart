@@ -1,0 +1,14 @@
+.hero-section .cursor-pointer {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-section .cursor-pointer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Specific styles for hero image */
+.hero-section img.cursor-pointer:hover {
+  opacity: 0.95;
+}
