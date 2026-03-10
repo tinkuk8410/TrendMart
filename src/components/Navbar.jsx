@@ -72,7 +72,7 @@ const CustomNavbar = () => {
                   <CircleUserRound size={25} />
                 </span>
                 <ul className="dropdown-menu dropdown-menu-end shadow">
-                  <li><Link className="dropdown-item" to="/login">Login</Link></li>
+                  <li><Link className="dropdown-item" to="/login">Login/Sign in</Link></li>
                   <li><Link className="dropdown-item" to="/signup">Sign Up</Link></li>
                 </ul>
               </div>
